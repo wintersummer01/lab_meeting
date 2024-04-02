@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 	<head>
-		<title>청송갬빗 참가자 명단 기록</title>
+		<title>랩미팅 수고용</title>
 		<!--output.setTitle(g_title);-->
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,7 +20,13 @@
 			body{
 				display:table;
 				height:100%;
+
 				margin:0 auto;
+				width:100%
+			}
+			.divider{
+                float:left;
+				vertical-align:middle;
 				width:100%
 			}
 			.container{
@@ -101,52 +107,76 @@
 	</head>
 
 <body>
-<div class="container">
-	<div class="center" style="width: 500px">
-		<div style="margin: 15px"></div>
-		<div id="title"></div>
-		<div style="margin: 20px"></div>
-		<input type="text" id="input_name" autofocus></input>
-		<div style="margin: 15px"></div>
-		<input type="text" id="input_number" autofocus></input>
-		<div style="margin: 15px"></div>
-		<button id="btn_write"></button>
-		<div style="margin: 20px"></div>
-        <hr width="80%"></hr>
-		<div style="margin: 20px"></div>
-		<input class="short" id="input_team_num" float:left></input>
-		<button class="shortbtn" id="btn_start" float:left></button>
-		<button class="shortrst" id="btn_reset" float:right></button>
-		<div style="margin: 15px"></div>
-		<div class="text" id="me"></div>
-		<div style="margin: 10px"></div>
-	</div>
-    <div style="margin: 70px"></div>
-	<div class="center" id="table_center" style="padding: 15px">
-        <table class="table" id="student_data">
-            <thead>
-                <tr>
-                <th scope="col">이름</th>
-                <th scope="col">학번</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                  <td>최동하</td>
-                  <td>2020193004</td>
-                </tr>
-            </tbody>
-        </table>
-        <table class="table" id="team_data">
-        </table>
-	</div>
+<div class="divider">
+    <div class="container">
+        <div class="center" style="width: 500px">
+            <div style="margin: 15px"></div>
+            <div id="title"></div>
+            <div style="margin: 20px"></div>
+            <input type="text" id="input_name" autofocus></input>
+            <div style="margin: 15px"></div>
+            <input type="text" id="input_number" autofocus></input>
+            <div style="margin: 15px"></div>
+            <button id="btn_write"></button>
+            <div style="margin: 20px"></div>
+            <hr width="80%"></hr>
+            <div style="margin: 20px"></div>
+            <input class="short" id="input_team_num" float:left></input>
+            <button class="shortbtn" id="btn_start" float:left></button>
+            <button class="shortrst" id="btn_reset" float:right></button>
+            <div style="margin: 15px"></div>
+            <div class="text" id="me"></div>
+            <div style="margin: 10px"></div>
+        </div>
+        <div style="margin: 70px"></div>
+        <div class="center" id="table_center" style="padding: 15px">
+            <table class="table" id="student_data">
+                <thead>
+                    <tr>
+                    <th scope="col">이름</th>
+                    <th scope="col">학번</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                      <td>최동하</td>
+                      <td>2020193004</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table" id="team_data">
+            </table>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="center" style="width: 100px">
+            <div style="margin: 15px"></div>
+            <div id="title"></div>
+            <div style="margin: 20px"></div>
+            <input type="text" id="input_name" autofocus></input>
+            <div style="margin: 15px"></div>
+            <input type="text" id="input_number" autofocus></input>
+            <div style="margin: 15px"></div>
+            <button id="btn_write"></button>
+            <div style="margin: 20px"></div>
+            <hr width="80%"></hr>
+            <div style="margin: 20px"></div>
+            <input class="short" id="input_team_num" float:left></input>
+            <button class="shortbtn" id="btn_start" float:left></button>
+            <button class="shortrst" id="btn_reset" float:right></button>
+            <div style="margin: 15px"></div>
+            <div class="text" id="me"></div>
+            <div style="margin: 10px"></div>
+        </div>
+    </div>
 </div>
 
 
 <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 <script type="text/javascript">
 
-$("#title").text("청송갬빗 참가자 명단 기록");
+$("#title").text("Chae Lab 2024 PT order indicator");
 $("#input_name").attr("placeholder", "이름").val("").focus().blur();
 $("#input_number").attr("placeholder", "학번").val("").focus().blur();
 $("#input_team_num").attr("placeholder", "팀당 인원").val("").focus().blur();
