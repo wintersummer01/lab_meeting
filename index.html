@@ -22,12 +22,8 @@
 				height:100%;
 
 				margin:0 auto;
-				width:100%
-			}
-			.divider{
-                float:left;
-				vertical-align:middle;
-				width:100%
+				width:100%;
+				float:left
 			}
 			.container{
 				background:rgba(0,0,0,.05);
@@ -46,7 +42,7 @@
 				border:1px solid;
 				border-radius:3px;
 				height:36px;
-				width:89%
+				width:59%
 			}
                 .short{
                     font-size: 18px;
@@ -59,7 +55,7 @@
 				color:#fff;
 				cursor:pointer;
 				height:40px;
-				width:90%;
+				width:60%;
 			}
                 .shortbtn{
                     background-color:#578ac1;
@@ -107,95 +103,250 @@
 	</head>
 
 <body>
-<div class="divider">
-    <div class="container">
-        <div class="center" style="width: 500px">
-            <div style="margin: 15px"></div>
-            <div id="title"></div>
-            <div style="margin: 20px"></div>
-            <input type="text" id="input_name" autofocus></input>
-            <div style="margin: 15px"></div>
-            <input type="text" id="input_number" autofocus></input>
-            <div style="margin: 15px"></div>
-            <button id="btn_write"></button>
-            <div style="margin: 20px"></div>
-            <hr width="80%"></hr>
-            <div style="margin: 20px"></div>
-            <input class="short" id="input_team_num" float:left></input>
-            <button class="shortbtn" id="btn_start" float:left></button>
-            <button class="shortrst" id="btn_reset" float:right></button>
-            <div style="margin: 15px"></div>
-            <div class="text" id="me"></div>
-            <div style="margin: 10px"></div>
-        </div>
-        <div style="margin: 70px"></div>
-        <div class="center" id="table_center" style="padding: 15px">
-            <table class="table" id="student_data">
-                <thead>
-                    <tr>
-                    <th scope="col">이름</th>
-                    <th scope="col">학번</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                      <td>최동하</td>
-                      <td>2020193004</td>
-                    </tr>
-                </tbody>
-            </table>
-            <table class="table" id="team_data">
-            </table>
-        </div>
-    </div>
-    
-    <div class="container">
-        <div class="center" style="width: 100px">
-            <div style="margin: 15px"></div>
-            <div id="title"></div>
-            <div style="margin: 20px"></div>
-            <input type="text" id="input_name" autofocus></input>
-            <div style="margin: 15px"></div>
-            <input type="text" id="input_number" autofocus></input>
-            <div style="margin: 15px"></div>
-            <button id="btn_write"></button>
-            <div style="margin: 20px"></div>
-            <hr width="80%"></hr>
-            <div style="margin: 20px"></div>
-            <input class="short" id="input_team_num" float:left></input>
-            <button class="shortbtn" id="btn_start" float:left></button>
-            <button class="shortrst" id="btn_reset" float:right></button>
-            <div style="margin: 15px"></div>
-            <div class="text" id="me"></div>
-            <div style="margin: 10px"></div>
-        </div>
-    </div>
+<div class="container">
+	<div class="center" id="table_center" style="padding: 15px">
+		<div class="text" style="font-size:30px; font: bold">기존 순서</div>
+		<div style="margin: 20px"></div>
+		<table class="table" id="raw_name">
+			<tbody>
+				<tr>
+					<td bgcolor="#FFFF00">1</td>
+					<td bgcolor="#FFFF00">최동하</td>
+					<td>2</td>
+					<td>박건우</td>
+					<td>3</td>
+					<td>박상하</td>
+					<td>4</td>
+					<td>현해웅</td>
+					<td>5</td>
+					<td>문형주</td>
+				</tr>
+				<tr>
+					<td>6</td>
+					<td>최진영</td>
+					<td>7</td>
+					<td>김용휘</td>
+					<td>8</td>
+					<td>김윤태</td>
+					<td>9</td>
+					<td>민석기</td>
+					<td>10</td>
+					<td>김혜원</td>
+				</tr>
+				<tr>
+					<td>11</td>
+					<td>양시윤</td>
+					<td>12</td>
+					<td>전동수</td>
+					<td>13</td>
+					<td>유한주</td>
+					<td>14</td>
+					<td>황상준</td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="center" id="table_center" style="padding: 15px; margin-left: 40px">
+		<div class="text" style="font-size:30px; font: bold">추첨 번호</div>
+		<div style="margin: 20px"></div>
+		<table class="table" id="raw_number">
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+					<td>4</td>
+					<td>5</td>
+				</tr>
+				<tr>
+					<td>6</td>
+					<td>7</td>
+					<td>8</td>
+					<td>9</td>
+					<td>10</td>
+				</tr>
+				<tr>
+					<td>11</td>
+					<td>12</td>
+					<td>13</td>
+					<td>14</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div style="margin: 40px"></div>
+	<div class="center" style="width: 750px">
+		<div style="margin: 15px"></div>
+		<div id="title"></div>
+		<div style="margin: 20px"></div>
+		<div class="text" id="who", style="font-size:30px; font: bold"></div>
+		<div style="margin: 20px"></div>
+		<input type="text" id="input_number" autofocus></input>
+		<div style="margin: 20px"></div>
+		<button id="btn_write"></button>
+		<div style="margin: 15px"></div>
+		<div class="text" id="me"></div>
+		<div style="margin: 10px"></div>
+	</div>
+	<div style="margin: 70px"></div>
 </div>
-
+<div class="container" stype="margin-right: 200px">
+	<!--<div class="center" style="width: 100px; margin-right: 200px"> -->
+	<div class="center" id="table_center" style="width: 335px; padding: 15px; margin-right: 150px">
+		<table class="table" id="result">
+			<thead>
+				<tr>
+					<th scope="col">순번</th>
+					<th scope="col">이름</th>
+					<th scope="col">기존순서</th>
+					<th scope="col">추첨번호</th>
+					<th scope="col">weight</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>이현휘</td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>박호연</td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>박하진</td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>6</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>7</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>8</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>9</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>10</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>11</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>12</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>13</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>14</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>15</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>16</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>17</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
 
 <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 <script type="text/javascript">
 
-$("#title").text("Chae Lab 2024 PT order indicator");
-$("#input_name").attr("placeholder", "이름").val("").focus().blur();
-$("#input_number").attr("placeholder", "학번").val("").focus().blur();
-$("#input_team_num").attr("placeholder", "팀당 인원").val("").focus().blur();
-$("#btn_write").text("입력");
-$("#btn_start").text("팀 짜기");
-$("#btn_reset").text("시트 리셋");
-$("#me").text("Made by 최동하 RA");
+function button_write(val) {
 
-$("#btn_write").click(function(){writeValue(input_name.value, input_number.value);});
-$("#btn_start").click(function(){startRandom();});
-$("#btn_reset").click(function(){resetSheet();});
-$("#input_name").keydown(
-	function (key) {
-		if (key.keyCode === 13) {
-			$("#btn_write").click();
-			event.preventDefault();
-		}
-	}
-);
+	writeValue(val)
+
+}
+
+$("#title").text("Chae Lab 2024 PT order indicator");
+$("#who").text("<최동하> 번호 : ");
+$("#input_number").attr("placeholder", "뽑은 번호").val("").focus().blur();
+$("#me").text("Made by 최동하");
+$("#btn_write").text("입력");
+
+$("#btn_write").click(function(){writeValue(input_number.value);});
 $("#input_number").keydown(
 	function (key) {
 		if (key.keyCode === 13) {
@@ -204,14 +355,9 @@ $("#input_number").keydown(
 		}
 	}
 );
-$("#input_team_num").keydown(
-	function (key) {
-		if (key.keyCode === 13) {
-			$("#btn_start").click();
-			event.preventDefault();
-		}
-	}
-);
+
+
+
 </script>
 </body>
 </html>
