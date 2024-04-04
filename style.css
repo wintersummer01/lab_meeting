@@ -1,0 +1,90 @@
+@import url(https://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+* {
+  font-family: Nanum Gothic;
+  font-size: 20px;
+  text-align: center;
+}
+body,
+html {
+  height: 100%;
+}
+body {
+  display: table;
+  height: 100%;
+
+  margin: 0 auto;
+  width: 100%;
+  float: left;
+}
+.container {
+  background: rgba(0, 0, 0, 0.05);
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+}
+.center {
+  background: rgba(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0 5px 50px 0 rgba(0, 0, 0, 0.4);
+  display: inline-block;
+  position: relative;
+}
+input {
+  border: 1px solid;
+  border-radius: 3px;
+  height: 36px;
+  width: 59%;
+}
+.short {
+  font-size: 18px;
+  width: 20%;
+}
+button {
+  background-color: #4caf50;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  height: 40px;
+  width: 60%;
+}
+.shortbtn {
+  background-color: #578ac1;
+  width: 38%;
+  margin-right: 20px;
+}
+.shortrst {
+  background-color: #424242;
+  width: 24%;
+}
+button:hover {
+  background: #4ca050;
+}
+button.shortbtn:hover {
+  background: #3d628a;
+}
+button.shortrst:hover {
+  background: #2c2c2c;
+}
+.text {
+  font-size: 10px;
+}
+table {
+  border: 1px solid #444444;
+  border-collapse: collapse;
+  float: left;
+}
+thead {
+  background-color: #ececec;
+}
+th,
+td {
+  font-size: 18px;
+  border: 1px solid #444444;
+  padding: 5px;
+}
+@media screen and (max-width: 640px) {
+  .center {
+    width: 62.5%;
+  }
+}
